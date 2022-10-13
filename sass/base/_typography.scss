@@ -1,0 +1,89 @@
+// the body thing is applied to every default styling
+
+body {
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.7;
+    color: $light-white-withless-opacity;
+    padding: 1.5vh;
+
+    color: $color-faint-black;
+}
+
+// specilised styling affected to targeted class
+
+.heading-primary {
+    color: $plain-white;
+    text-transform: uppercase;
+    margin-bottom: 160px;
+
+
+    &--main {
+        display: block;
+        font-size: 70px;
+        font-weight: 700;
+        letter-spacing: 40.4px;
+        animation-name: moveInLeft;
+        animation-duration: 2s;
+        width: 0 auto;
+        //text-align: center;
+
+    }
+
+    &--sub {
+        display: block;
+        display: block;
+        //position: absolute;
+        text-align: center;
+        font-size: 25px;
+        font-weight: 600;
+        letter-spacing: 25.4px;
+        animation-name: appear;
+        animation-duration: 1.6s;
+        //width: 15%;
+    }
+}
+
+
+.heading-secondary {
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    font-weight: 900;
+    //background-image: linear-gradient(to right, $color-primary-dark, $color-secondary-dark);
+    background-image: linear-gradient(to right bottom,
+            $color-primary-dark,
+            $color-secondary-dark),
+        url("../../img/green-leaves-5k-qhd.jpg");
+
+    /*background-image: linear-gradient(to right bottom,
+            $color-primary-dark,
+            $color-secondary-dark),
+        url("../../img/3k-\ 1.png");*/
+
+    background-size: cover;
+    -webkit-background-clip: text;
+    color: transparent;
+    letter-spacing: .8rem;
+    transition: all .2s;
+
+    text-shadow: .7rem 3rem 3rem rgba(0, 0, 0, 0.377);
+
+    &:hover {
+
+        text-shadow: .10rem 5rem 5rem $color-faint-black;
+    }
+}
+
+.heading-tertiary {
+
+
+    font-size: 1.9rem;
+    text-transform: uppercase;
+
+}
+
+p {
+    font-size: 1.6rem;
+    margin-bottom: 6rem;
+}

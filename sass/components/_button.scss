@@ -1,0 +1,143 @@
+.btn {
+
+
+    &,
+    &:link,
+
+    &:visited {
+        text-transform: uppercase;
+        text-decoration: none;
+
+        text-shadow: 0 9px 10px black;
+        padding: 1.5rem 4rem;
+        display: inline-flex;
+        letter-spacing: 3px;
+        border-radius: 100px;
+        transition: all .2s;
+        position: relative;
+        font-size: $deafault-font-size;
+
+        animation-name: frombelow;
+        animation-duration: 2.1s;
+    }
+
+
+    &:hover {
+        transform: translateY(-3px);
+        text-overflow: clip;
+        box-shadow: $box-shadow
+    }
+
+    &:active,
+    &:focus {
+        transform: translate(-1px); // this is after the button is clicked.
+    }
+
+    &--white {
+        background-color: rgba(255, 255, 255, 0.628); // this is main button before the hidding button
+        color: $color-faint-black;
+
+    }
+
+
+    &::after {
+        content: "";
+        display: inline-block;
+        height: 100%;
+        width: 100%;
+        border-radius: 100px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        transition: all .4s;
+
+
+    }
+
+}
+
+.btn--white::after {
+    background-color: rgba(255, 255, 255, 0.632); //this controls the opacity of the buttton that is pooping out 
+    position: absolute;
+}
+
+
+.btn:hover::after {
+    transform: scaleX(1.4) scaleY(1.6); /// this here actually makes the button pop out and fade away
+
+    opacity: 0;
+
+}
+
+.btn--second {
+
+    &,
+    &:link,
+    &:visited {
+        font-size: $deafault-font-size;
+        text-transform: uppercase;
+        display: inline-block;
+        text-decoration: none;
+        color: $color-faint-black;
+        border-bottom: 7px solid $color-primary-dark;
+        padding: 1.5rem 4rem;
+        /*border-radius: 100px;
+        */
+        transition: all .2s;
+    }
+
+    &:hover {
+        font-weight: 700;
+        background-image: linear-gradient(to right bottom,
+                $color-primary-dark,
+                $color-secondary-dark),
+            url("../../img/green-leaves-5k-qhd.jpg");
+        color: $color-button-all-secondary;
+        box-shadow: $box-shadow;
+        transform: translateY(-2px);
+
+    }
+
+    &.active {
+        box-shadow: 0 5rem 5rem rgba(11, 11, 11, 0.251);
+        transform: translateY(-2px);
+    }
+
+
+}
+
+/*.btn-text {
+
+    &:link,
+    &:visited {
+        font-size: $deafault-font-size;
+        text-transform: uppercase;
+        display: inline-block;
+        text-decoration: none;
+        color: $color-faint-black;
+        border-bottom: 7px url("../../img/green-leaves-5k-qhd.jpg");
+        padding: 1.5rem 4rem;
+        //border-radius: 100px;
+
+
+        transition: all .5s;
+    }
+
+    &:hover {
+        font-weight: 700;
+        background-image: linear-gradient(to right bottom,
+                $color-primary-dark,
+                $color-secondary-dark),
+            url("../../img/green-leaves-5k-qhd.jpg");
+        color: $color-button-all-secondary;
+        box-shadow: $box-shadow;
+        transform: translateY(-2px);
+
+    }
+
+    &.active {
+        box-shadow: $box-shadow;
+        transform: translateY(-2px);
+    }
+}*/

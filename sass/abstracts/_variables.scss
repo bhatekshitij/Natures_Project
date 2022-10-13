@@ -1,0 +1,51 @@
+// colors
+$color-primary: #de63366c;
+$color-secondary: #28b4854f;
+$light-white-withless-opacity :rgba(255, 255, 255, 0.142);
+$plain-white : #fff;
+
+//white and black
+$color-gray-light-1 : #f7f7f7;
+$color-faint-black : rgba(0, 0, 0, 0.655);
+$color-button-all-secondary: rgba(255, 255, 255, 0.79);
+
+
+//colors for gradient
+//$color-primary-dark :#405e56;
+//$color-secondary-dark: #289e8e;
+$color-primary-dark :#00c73c81;
+$color-secondary-dark: #289e8e;
+
+
+$color-primary-dark-1 :#8700f5;
+$color-secondary-dark-1: #d2530e;
+
+$color-primary-dark-2 :#f56e0011;
+$color-secondary-dark-2: #152956;
+
+//for tours section 
+$color-secondary-light : #fdba007e;
+$color-secondary-darktoursection : #ff783074;
+
+$color-tertiary-light : #2998ffd3;
+$color-tertiary-dark : #5543faac;
+
+
+
+
+
+
+
+//box-shadow 
+$box-shadow: 0 0.5rem 1rem rgba(11, 11, 11, 0.251);
+
+
+
+// font 
+
+$deafault-font-size : 2.0rem;
+// GRID
+
+$grid-width: 137rem;
+$gutter-vertical : 8rem;
+$gutter-horizontal :12rem;

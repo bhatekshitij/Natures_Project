@@ -1,0 +1,179 @@
+.card {
+    ///functionality
+    perspective: 150rem;
+
+    position: relative; // as the position absolute is already specified something should be relative for it to be absolute
+    height: 54rem; // this here is specified so as the height doesnt colapse the other two rows dont shift, if not declared it also disabled the properties of perspective which actually provides a cool animtion
+
+
+    &__side {
+
+        height: 54rem; //this defines the actual size of card.
+        color: #eee;
+        box-shadow: $box-shadow;
+        border-radius: 3px;
+        transition: all .8s ease;
+        overflow: hidden;
+        top: 0;
+        left: 0;
+        width: 100%; // to match the margin and the size of the cards
+        position: absolute; // so that the cards are sitting on top of one another
+        backface-visibility: hidden; // this property makes sure the actual working of the card,as by default the card are sitting on one another but even after rotating the other card doesnt come on top of another card.for that it should be made hidden
+
+
+        &--front {
+            background-color: $plain-white;
+        }
+
+        &--back {
+
+            transform: rotateY(180deg); // to be changed to 180
+
+
+            &-1 {
+                background-color: rgb(193, 76, 34);
+                background-image: linear-gradient(to right bottom, $color-secondary-light, $color-secondary-darktoursection)
+            }
+
+            &-2 {
+                background-color: rgb(53, 141, 72);
+                background-image: linear-gradient(to right, $color-primary-dark, $color-secondary-dark);
+
+            }
+
+            &-3 {
+                background-color: rgb(46, 46, 149);
+                background-image: linear-gradient(to right bottom, $color-tertiary-light, $color-tertiary-dark);
+            }
+        }
+
+    }
+
+    &:hover &__side--front {
+        transform: rotateY(-180deg);
+
+    }
+
+    &:hover &__side--back {
+        transform: rotateY(0);
+    }
+
+    //FRONT SIDE STYLING
+    &__picture {
+        background-size: cover;
+        height: 23rem;
+        background-blend-mode: screen;
+
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+
+        &--1 {
+            background-image: linear-gradient(to right bottom, $color-secondary-light, $color-secondary-darktoursection), url(../img/nat-5.jpg);
+
+        }
+
+        &--2 {
+            background-image: linear-gradient(to right bottom, $color-primary-dark, $color-secondary-dark), url(../img/nat-6.jpg);
+
+        }
+
+        &--3 {
+            background-image: linear-gradient(to right bottom, $color-tertiary-light, $color-tertiary-dark), url(../img/nat-7.jpg);
+
+        }
+    }
+
+    &__heading {
+        font-size: 2.9rem;
+        font-weight: 300;
+        text-align: right;
+        text-transform: uppercase;
+        color: $plain-white;
+        position: absolute;
+        top: 14rem;
+        right: 2rem;
+        width: 52%;
+
+
+    }
+
+    &__heading-span {
+        &--1 {
+            -webkit-box-decoration-break: clone;
+            box-decoration-break: clone;
+            padding: 1rem 2.5rem;
+            background-image: linear-gradient(to right bottom, rgba($color-secondary-light, 0.85), rgba($color-secondary-darktoursection, 0.85));
+
+
+        }
+
+        &--2 {
+            -webkit-box-decoration-break: clone;
+            box-decoration-break: clone;
+            padding: 1rem 2.5rem;
+            background-image: linear-gradient(to right bottom, rgba($color-primary-dark, 0.85), rgba($color-secondary-dark, 0.85));
+
+        }
+
+        &--3 {
+            padding: 1rem 2.5rem;
+            background-image: linear-gradient(to right bottom, $color-tertiary-light, $color-tertiary-dark);
+        }
+    }
+
+    &__details {
+        padding-top: 10%;
+        margin: 0 auto;
+        text-align: center;
+
+        ul {
+            list-style: none;
+            width: 80%;
+            margin-left: 1.6rem;
+
+
+            li {
+
+                color: rgb(75, 75, 75);
+                text-align: center;
+                font-size: 1.5rem;
+                padding: 1.3rem;
+
+                &:not(:last-child) {
+                    border-bottom: 1px solid rgb(238, 238, 238);
+                }
+
+            }
+        }
+    }
+
+    // BACK SIDE STYLING 
+    &__cta {
+        position: absolute;
+        top: 50%;
+        right: 50%;
+        transform: translate(50%, -50%);
+        width: 90%;
+        text-align: center;
+
+
+
+    }
+
+    &__price-box {
+        text-align: center;
+        color: $plain-white;
+        //margin: 8rem;
+    }
+
+    &__price-only {
+        font-size: 2.4rem;
+        text-transform: uppercase;
+    }
+
+    &__price-value {
+        font-size: 6rem;
+        font-weight: 100;
+    }
+
+
+}
